@@ -1,0 +1,69 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include <unordered_map>
+
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        int c,n,rs=0,days=0;
+        cin>>n>>c;
+        int sal[n];
+        for(int i=0;i<n;i++)
+        cin>>sal[i];
+        int course[n-1];
+        for(int i=0;i<n-1;i++)
+        cin>>course[i];
+        int j=0;
+        for(int i=0;i<n;i++){
+            days++;
+            rs=rs+sal[i];
+            if(rs>=c){
+                break;
+            }
+            if(rs>=course[j])
+            {
+                rs=rs-course[j];
+                j++;
+                days++;
+            }
+            else{
+                while(rs<course[j]){
+                    rs=rs+sal[i];
+                    days++;
+                }
+                rs=rs-course[j];
+                j++;
+                days++;
+                
+            }
+            
+        }
+        if(rs<c){
+            while(rs<c){
+                    rs=rs+sal[n-1];
+                    days++;
+                }
+        }
+        cout<<days-1<<"\n";
+        
+        
+    }
+    return 0;
+}
+
+
+
+
+
+
