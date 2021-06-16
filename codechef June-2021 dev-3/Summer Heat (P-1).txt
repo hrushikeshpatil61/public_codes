@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int xa,xb,Xa,Xb,c1=0,c2=0;
+	    cin>>xa>>xb>>Xa>>Xb;
+	    if(Xa<xa){
+	        c1=1;
+	    }
+	    else{
+	        if(Xa%xa==0){
+	            c1=Xa/xa;
+	        }
+	        else{
+	            c1=Xa/xa;
+	            c1++;
+	        }
+	    }
+	    if(Xb<xb){
+	        c2=1;
+	    }
+	    else{
+	        if(Xb%xb==0){
+	            c2=Xb/xb;
+	        }
+	        else{
+	            c2=Xb/xb;
+	            c2++;
+	        }
+	    }
+	    cout<<c1+c2<<"\n";
+	}
+	return 0;
+}

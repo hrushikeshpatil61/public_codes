@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int t,D=0,d=0,P=0,Q=0;
+    cin>>t;
+    while(t--){
+        cin>>D>>d>>P>>Q;
+        int rs=0,dcount=0;
+        while(D--){
+            dcount++;
+            rs=rs+P;
+            if(dcount==d){
+                dcount=0;
+                P=P+Q;
+            }
+            
+        }
+        cout<<rs<<"\n";
+    }
+
+	return 0;
+}

@@ -1,0 +1,39 @@
+/*
+	logic:  x+y=z
+	x1(A*B)+y1(A) = z1(A)
+	if x1=y1  =>z1=(B+1)A
+
+	so numbers are A*B , A, (B+1)A
+*/ 	
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+#define ll long long
+#include <iostream>
+
+using namespace std;
+void solve(){
+    ll a,b;
+    cin>>a>>b;
+    if(b!=1){
+        cout<<"YES"<<"\n";
+        cout<<a*b<<' '<<a<<' '<<(b+1LL)*a<<'\n';
+    }
+    else{
+        cout<<"NO"<<endl;
+    }
+}
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        solve();
+    }
+    
+    return 0;
+}
