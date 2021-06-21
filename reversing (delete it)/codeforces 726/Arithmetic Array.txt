@@ -1,0 +1,38 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int t=0;
+    cin>>t;
+    while(t--){
+        int n=0;
+        cin>>n;
+        int arr[n],sum=0;
+        for(int i=0;i<n;i++){
+            cin>>arr[i];
+            sum+=arr[i];
+        }
+        if(sum==n){
+            cout<<0<<"\n";
+        }
+        else if(sum>n){
+            cout<<sum-n<<"\n";
+        }
+        else{
+            cout<<1<<"\n";
+        }
+    }
+    
+
+    return 0;
+}

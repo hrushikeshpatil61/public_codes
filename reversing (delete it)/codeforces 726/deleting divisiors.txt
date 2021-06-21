@@ -1,0 +1,44 @@
+
+#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+using namespace std;
+bool fun(int &n){
+    for(int i=2;i<n;i++){
+            if(n%i==0){
+                n-=i;
+                return true;    
+            }
+            
+        }
+        return false;
+}
+int main()
+{
+    int t=0;
+    cin>>t;
+    while(t--){
+        int num=0,n=0;
+        cin>>n;
+        if(n&1)
+        cout<<"Bob";
+        else{
+            if(!n&(n-1)){
+                int c=0;
+                while(n){
+                    n=n/2;
+                    c++;
+                }
+                if(c&1) cout<<"Alice";
+                else cout<<"Bob";
+            }
+            cout<<"Alice";
+        }
+        cout<<"\n";
+        
+    }
+    
+
+    return 0;
+}

@@ -1,0 +1,24 @@
+
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t,n,num;
+    cin>>t;
+    while(t--){
+        cin>>n;
+        int i=1;
+        set<int>arr;
+        for(;i<=n && arr.size()!=7;i++){
+            cin>>num;
+            if(num<8)
+            arr.insert(num);
+        }
+        cout<<i-1<<endl;
+        
+    }
+
+    return 0;
+}

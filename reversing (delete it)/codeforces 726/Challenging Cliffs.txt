@@ -1,0 +1,49 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+    int t=0;
+    cin>>t;
+    while(t--){
+        int num=0,n=0;
+        cin>>n;
+        int arr[n];
+        for(int i=0;i<n;i++)
+        {
+            cin>>arr[i];
+        }
+        sort(arr,arr+n);
+        int diff=arr[n-1],start=-1,end=-1,index=-1;
+        for(int i=0;i<n-1;i++){
+            if(abs(arr[i]-arr[i+1])<diff){
+                start=arr[i];
+                end=arr[i+1];
+                index=i;
+                diff=abs(arr[i]-arr[i+1]);
+            }
+        }
+        cout<<start<<" ";
+        for(int i=index+2;i<n;i++){
+            cout<<arr[i]<<" ";
+            
+        }
+        for(int i=0;i<index;i++){
+            cout<<arr[i]<<" ";
+        }
+        cout<<end<<"\n";
+    }
+    
+
+    return 0;
+}
